@@ -1,0 +1,92 @@
+@charset "UTF-8";
+.playerInfo-container{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 2fr 2fr 2fr 1fr 2fr;  
+/* 	gap: 20px 10px; */
+	grid-template-areas:
+		"picture_player name previousteam . newteam"
+		"picture_player age picture_previousteam picture_arrow picture_newteam"
+		"picture_player position picture_previousteam picture_arrow picture_newteam"
+		"picture_player fee picture_previousteam picture_arrow picture_newteam"
+}
+
+
+
+
+#player_name{ grid-area: name; }
+#player_age{ grid-area: age; }
+#picture_player{ grid-area: picture_player; }
+#previousteam{ grid-area: previousteam; }
+#picture_previousteam{ grid-area: picture_previousteam; }
+#newteam{ grid-area: newteam; }
+#picture_newteam{ grid-area: picture_newteam; }
+#position{ grid-area: position; }
+#fee{ grid-area: fee; }
+#picture_arrow{grid-area: picture_arrow;}
+
+#picture_arrow > img{
+	width: 60%; 
+	height: inherit;
+}
+
+#previousteam, #newteam{
+	text-align:center;
+	margin : auto 0px; 
+}
+#player_name, #player_age, #position, #fee, #transfer_year{
+	margin : auto 0px auto 20px; 
+}
+
+#picture_player, #picture_previousteam, #picture_newteam, #picture_arrow{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+#picture_player > img{
+	width:130px;
+	height:150px;
+}
+.in-out-header{
+	margin-left:5%;
+}
+#picture_previousteam img, #picture_newteam img{
+	width:100px;
+	height:100px;
+}
+
+.history-title > div{
+	background-color:#ffc75e;
+}
+.history-items, .history-title{
+	display:flex;
+	justify-content:center;
+}
+.history-items>div , .history-title>div{
+	width:15%;
+	border:1px solid gray;
+	text-align:center;
+}
+.transferHistory-container{
+/* 	display:grid;
+	grid-template-columns:repeat(6, 1fr);
+	grid-template-areas:
+		"transfer_year age position fee previousteam newteam" */
+		
+}
+#transfer_year{ grid-area: transfer_year;}
+
+#playerInfo{
+   position:relative;
+   height:400px;
+}
+.starImg{
+   position:absolute;
+   height:30px;
+   left:120px;
+}
+.starImg.hidden{
+   display:none;
+}
+
+

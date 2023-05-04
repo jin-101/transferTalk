@@ -1,0 +1,294 @@
+header{
+	position: relative;
+	height: var(--topGap);
+	margin-bottom:var(--topMarginB);
+	background-color:var(--headerColor);
+}
+
+/* 홈버튼 */
+.header-homelogo{
+	position:absolute;
+	display:flex;
+	align-items:center;
+	height: 65%;
+    top: calc((var(--topGap) * 0.3 - var(--loginButtonHeight)) / 2);
+    left: 2rem;	
+}
+.header-homelogo > img{
+	width:inherit;
+	height:inherit;
+}
+.header-homelogo:hover >img{
+	cursor:pointer;
+}
+
+/* 국가-리그-팀 선택 dropdown css */
+.header-dropdown-container{
+	display: flex;
+	justify-content:end;
+	align-items:center;
+	height: 70%;
+}
+
+.header-selecter-container{
+	display:flex;
+	width: 90%;
+	height: 50%;
+	margin-right:2rem;
+    justify-content: end;
+}
+.header-selecter-contents{
+	margin:0 var(--headerItemMarginRight);
+	width: 30%;
+}
+.header-selecter-form{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position:relative;
+}
+.header-selecter-select{
+	display: inline-block;
+  	width: 100%;
+  	padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  	line-height: 1.5;
+  	color: #495057;
+  	vertical-align: middle;
+  	background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+  	background-size: 8px 10px;
+  	border: 1px solid #ced4da;
+ 	 border-radius: 0.25rem;
+  
+  	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	appearance: none;
+  	font-size: 110%;
+}
+.header-selecter-select::-ms-expand { 
+	display: none;
+}
+
+
+.header-selecter-sign{
+	position:relative;
+	width:2rem;
+	display:flex;
+	align-items:center;
+}
+
+.header-selecter-sign > img{
+  position:absolute;
+  width: inherit; 
+  height: inherit;
+  display:none;
+}
+.header-selecter-sign .next-arrow-Img{
+	rotate:90deg;
+}
+
+.header-selecter-sign > img.selected{
+	display:block;
+}
+
+
+/* menu hover css */
+.header-hover-container{ 
+	height: 30%;
+    display: flex;
+    margin-right:1rem;
+    justify-content: end;
+}
+.header-hover-loginOut{
+    display: flex;
+    align-items: center;
+    width: calc(100% - var(--navWidth));
+    margin-left: 2rem;
+}
+
+.header-hover-contents{
+ 	height:100%;
+	display:flex;
+	align-items:center;
+	width: var(--navWidth);
+}
+
+header .header-item{
+	width : calc(100% / 3);
+	height: 100%;
+}
+header .header-item .item-name{
+	padding:0 2rem;
+	font-family: Arial, sans-serif;
+	font-size:20px;
+	height: 100%;
+    text-align: center;
+    line-height: calc(var(--topGap)*0.3);
+    font-weight:700;
+}
+header .header-item:hover .item-name{
+  background-color: #669900;
+  color: orange;
+  border-radius: 6px 6px 0 0;
+  cursor:pointer;
+}
+header .header-item .item-contents{
+  width: 100%;
+  display: none;
+}
+header .header-item:hover .item-contents{
+  display: block;
+}
+
+header.header-item .item-contents .contents-menu{ 
+  /* background-color: #2c2a29; */
+  background-color: blue;
+  height: 200px;  
+} 
+
+header .header-item .item-contents .contents-menu .inner > li {
+	position:relative;
+    width: 100%;
+	background-color: gray;
+	color:white;
+	padding:1rem 0;
+	left:0;
+	text-align:center;
+	z-index: 10;
+}
+header .header-item .item-contents .contents-menu .inner > li:hover{
+	background-color: lightgray;
+	cursor:pointer;
+}
+
+
+/* login css */
+.login-container{
+	width:4rem;
+	transition:width 1s;
+	height:var(--loginButtonHeight);
+}
+
+.login-container > .login-button{
+	width:inherit;
+	height:inherit;
+	border-radius: 10px;
+	background-color:white;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border: none;
+}
+.login-container:hover{	
+	width: 9rem;
+	transition:width 1s;
+}
+
+.login-container:hover > .login-button{
+	background-color:#0069d9;
+	cursor:pointer;
+	transition:background-color 1s;
+}
+
+
+.login-container > .login-button > img{
+	display:inline;
+	width:auto;
+	height:95%;
+}
+.login-container:hover > .login-button > img{
+	width:inherit;
+	display:none;
+}
+
+.login-container > .login-button > div {
+	width:inherit;
+	display:none;
+}
+.login-container:hover > .login-button> div{
+	display:block;
+	color:white;
+}
+
+
+/* logout css */
+.logout-container{
+ 	width:9rem;
+	height:var(--loginButtonHeight);
+}
+
+.logout-container > .logout-button{
+	width:inherit;
+	height:inherit;
+	border-radius: 10px;
+	background-color:#4661f5;
+	color:white;
+	border:none;
+}
+.logout-container:hover > .logout-button{
+	background-color:blue;
+	cursor:pointer;
+}
+
+/* login, logout 공통  */
+.header-item.hidden, .login-container.hidden, .logout-container.hidden, .login-container.scrollHidden, .logout-container.scrollHidden{
+	display:none;
+}
+
+/* media-query */
+@media (max-width: 850px) {
+  header{
+  	height:auto;
+  }
+  .header-homelogo{
+  	position:static;
+  	height:2rem;
+  	justify-content: start;
+    padding-top:2rem;
+    margin-left: 2rem;
+  }
+  .header-dropdown-container, .header-hover-container{
+  	width:100%;
+	height:auto;
+  }
+  .header-selecter-container, .header-hover-contents{
+	display:block;
+    width: 70%;
+    margin: 10px auto;
+  }
+  .header-selecter-contents{
+  	width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  .header-selecter-sign{
+    display: none;
+  }
+  .header-detail-btn{
+  	height: 2.5rem;
+  }
+  .header-detail-btn > button{
+  	width: 30%;
+  }
+  header .header-item {
+  	width:100%;
+  }
+  header .header-item:hover .item-contents{
+  	position: static;
+    display: block;
+    transition:.6s;
+  }
+  header.header-item .item-contents .contents-menu{ 
+  	width:100%;
+  }
+  header .header-item .item-contents .contents-menu .inner {
+  	width: 100%;
+  }
+  .header-hover-loginOut{
+  	position:fixed;
+    top: 1rem;
+    width:auto;
+    right: 1rem;
+  }
+}

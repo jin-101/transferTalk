@@ -1,0 +1,32 @@
+
+.map{
+	width: 100%;
+    height: 500px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-bottom:20px;
+}
+.mapDiv{
+	width:80%;
+	height:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+/* YOUTUBE VIDEO */
+.youtube {
+	  display:flex;
+	  justify-content:center;
+	  position:relative;
+	  width:100%;	
+	  height: 400px;
+	  overflow: hidden;
+	  background-color: #EDEDF8;
+}
+#player {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}

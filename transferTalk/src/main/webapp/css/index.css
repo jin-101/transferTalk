@@ -1,0 +1,100 @@
+/* index.css */
+@import 'header.css';
+@import 'footer.css';
+@import 'spinner.css';
+
+:root{
+	--bodyWidth : 100vw;
+	--viewWidth: 100%;
+	--topGap : 180px;
+	--topMarginB : 2rem;
+	--bottomGap : 100px;
+	--bottomMarginT: 20px;
+	--headerItemMarginRight : 1rem;
+	--navWidth : 70%;
+	--loginButtonHeight : 40px;
+	--loginButtonButtomGap:10px;
+	--headerColor:#ACC2FA;
+}
+html{
+	margin: 0;
+    padding: 0;
+  	font-size: 16px;
+}
+
+body{
+	margin:0;
+	width:var(--bodyWidth);
+	height:100vh;
+	margin: 0 auto;
+	color: #333;
+  	font-family: 'Nanum Gothic', sans-serif;
+  	overflow-x: hidden;
+    min-width:500px;
+}
+main{
+	width:95%;
+	margin: 0 auto;
+	min-height:calc(100vh - (var(--topGap) + var(--bottomGap) + var(--topMarginB) + var(--bottomMarginT)));
+}
+ul{
+	margin:0;
+	padding:0;
+}
+li {
+	list-style: none;
+	
+}
+
+.detail-btn{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.detail-btn > button{
+	border-radius:10px;
+	height:80%;
+}
+.detail-btn:hover > button{
+	cursor:pointer;;
+}
+::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+::-webkit-scrollbar-thumb {
+    height:30%; /* 스크롤바의 길이 */
+    background: gray; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color:#a0a0a5;
+}
+::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-info:hover {
+  color: #fff;
+  background-color: #138496;
+  border-color: #117a8b;
+}

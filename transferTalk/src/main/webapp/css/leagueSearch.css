@@ -1,0 +1,35 @@
+#search-title{
+	display:flex;
+	border-bottom:1px solid gray;
+	height:80px;
+	padding :20px 20px 50px;
+}
+#search-title > div {
+	margin-right: 20px;
+	height:100%;
+}
+#search-content{
+	display:none;
+}
+.map-nation-div{
+	background-color:#DADAF3;
+	height:100%;
+	width:300px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-radius:20px;
+}
+.map-selecter-contents{
+	height:100%;
+	display:flex;
+	align-items:center;
+}
+
+.map-selecter-form{
+	height:80%;
+}
+.map-selecter-select{
+	height:100%;
+	border-radius: 10px;
+}
